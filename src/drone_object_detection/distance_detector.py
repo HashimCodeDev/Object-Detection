@@ -16,13 +16,17 @@ class DroneObjectDistanceDetector:
     Combines RT-DETR for object detection and Depth Anything for distance estimation.
     """
     
+    # Find this in the __init__ method and update the default models:
+
     def __init__(
         self, 
-        detection_model="PekingU/rtdetr_r50vd",
+        detection_model="PekingU/rtdetr_r18vd",  
         depth_model="depth-anything/Depth-Anything-V2-Small-hf",
         confidence_threshold=0.5,
-        device=None
+        device=None,
+        skip_frames=2  # NEW: Process every Nth frame
     ):
+
         """
         Initialize detector with depth estimation.
         

@@ -1,9 +1,9 @@
 """
 Drone Object Detection with Distance Estimation
-Real-time object detection and depth estimation for drone applications.
 """
 
 from .distance_detector import DroneObjectDistanceDetector
+from . import models_config
 
 __version__ = "0.1.0"
-__all__ = ['DroneObjectDistanceDetector']
+__all__ = ['DroneObjectDistanceDetector', 'models_config']
