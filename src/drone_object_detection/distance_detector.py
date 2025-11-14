@@ -41,14 +41,14 @@ class DroneObjectDistanceDetector:
         
         # Load object detection model
         print(f"Loading detection model: {detection_model}...")
-        self.detection_processor = RTDetrImageProcessor.from_pretrained(detection_model)
+        self.detection_processor = RTDetrImageProcessor.from_pretrained(detection_model,use_fast=True)
         self.detection_model = RTDetrForObjectDetection.from_pretrained(detection_model)
         self.detection_model.to(self.device)
         self.detection_model.eval()
         
         # Load depth estimation model
         print(f"Loading depth model: {depth_model}...")
-        self.depth_processor = AutoImageProcessor.from_pretrained(depth_model)
+        self.depth_processor = AutoImageProcessor.from_pretrained(depth_model,use_fast=True)
         self.depth_model = AutoModelForDepthEstimation.from_pretrained(depth_model)
         self.depth_model.to(self.device)
         self.depth_model.eval()
