@@ -1,6 +1,5 @@
 # Python
 __pycache__/
-src/drone_object_detection/__pycache__/
 *.py[cod]
 *$py.class
 *.so
