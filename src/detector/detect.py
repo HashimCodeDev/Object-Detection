@@ -3,8 +3,13 @@ import cv2
 
 def main():
     """Real-time object detection using YOLOv8"""
+
+    # Try different models by changing the model name
+    # YOLOv8 options: yolov8n.pt, yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
+    # YOLO11 options: yolo11n.pt, yolo11s.pt, yolo11m.pt, yolo11l.pt, yolo11x.pt
+
     # Load YOLOv8 model
-    model = YOLO('models/yolov8n.pt')  # Will auto-download on first run
+    model = YOLO('models/yolov8s.pt')  # Will auto-download on first run
     
     # Open webcam (0 for default camera)
     cap = cv2.VideoCapture(0)

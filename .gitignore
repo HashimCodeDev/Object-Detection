@@ -47,6 +47,8 @@ data/output/*
 .cache/
 *.pt
 *.pth
+outputs/*
+!outputs/.gitkeep
 
 # OS
 .DS_Store
